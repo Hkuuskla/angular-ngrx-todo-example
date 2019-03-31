@@ -1,0 +1,13 @@
+<app-header></app-header>
+<main>
+  <app-task-creator (description)="createTask($event)"></app-task-creator>
+  <ng-container *ngFor="let task of (taskList$ | async)">
+    <app-task
+      [task]="task"
+      (done)="updateTask($event)"
+      (description)="updateTask($event)"
+      (datetime)="updateTask($event)"
+      (remove)="removeTask($event)"
+    ></app-task>
+  </ng-container>
+</main>

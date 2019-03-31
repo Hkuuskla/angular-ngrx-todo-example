@@ -1,1 +1,48 @@
+$material-icons-font-path: '~material-icons/iconfont/';
+@import '~material-icons/iconfont/material-icons.scss';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body, app-root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #003748 1%,#0085ae 100%);
+}
+
+app-root {
+  display: block;
+}
+
+
+mat-card.form-card {
+  width: 360px;
+  margin: 100px auto 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+
+  .logo {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .title {
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}

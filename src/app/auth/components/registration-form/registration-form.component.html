@@ -1,0 +1,46 @@
+<mat-card class="form-card">
+  <img class="logo" src="assets/logo.svg" alt="TODO">
+  <div class="title">Register a TODO account</div>
+  <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="firstname"
+        placeholder="First name"
+        required
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="lastname"
+        placeholder="Last name"
+        required
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="username"
+        placeholder="Username"
+        required
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+        required
+      >
+    </mat-form-field>
+    <p class="error" *ngIf="error">{{error}}</p>
+    <button type="submit" mat-raised-button color="primary">Register</button>
+    <button
+      mat-raised-button
+      color="secondary"
+      [routerLink]="['/login']"
+    >Cancel</button>
+  </form>
+</mat-card>

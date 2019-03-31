@@ -1,0 +1,14 @@
+<mat-card>
+  <label for="new-task-input">
+    <mat-icon>add</mat-icon>
+  </label>
+  <input
+    id="new-task-input"
+    matInput
+    type="text"
+    required
+    (blur)="setDescription($event.target.value)"
+    (keydown.enter)="$event.target.blur()"
+    [(ngModel)]="inputValue"
+  >
+</mat-card>

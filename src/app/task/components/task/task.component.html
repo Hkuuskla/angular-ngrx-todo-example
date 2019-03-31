@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-icon *ngIf="!task.done" (click)="setDone(true)">check_box_outline_blank</mat-icon>
+  <mat-icon *ngIf="task.done" (click)="setDone(false)">check_box</mat-icon>
+
+  <input
+    matInput
+    type="text"
+    required
+    [value]="task.description"
+    (blur)="setDescription($event.target.value)"
+    (keydown.enter)="$event.target.blur()"
+  >
+
+  <mat-icon [owlDateTimeTrigger]="dt" [ngClass]="{'not-set': !getDatetime() }">calendar_today</mat-icon>
+  <input
+    class="date-time-input"
+    [owlDateTime]="dt"
+    (dateTimeChange)="setDatetime($event.value)"
+    [value]="getDatetime()"
+  >
+  <owl-date-time #dt></owl-date-time>
+
+  <mat-icon (click)="removeTask()">delete</mat-icon>
+</mat-card>

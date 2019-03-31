@@ -1,0 +1,29 @@
+<mat-card class="form-card">
+  <img class="logo" src="assets/logo.svg" alt="TODO">
+  <div class="title">Log into Your TODO account</div>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="username"
+        placeholder="Username"
+        required
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="password"
+        type="password"
+        placeholder="Password"
+        required
+      >
+    </mat-form-field>
+    <p class="error" *ngIf="error">{{error}}</p>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+  </form>
+</mat-card>
+<div class="additional-actions">
+  <!-- <div class="forgot"><a [routerLink]="['/forgot-password']">Forgot password?</a></div> -->
+  <div class="register">Don't have an account? <a class="get-started" [routerLink]="['/register']">Get started!</a></div>
+</div>

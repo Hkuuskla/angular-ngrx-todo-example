@@ -1,0 +1,28 @@
+.additional-actions {
+  width: 360px;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+  font-size: 0.8em;
+
+  > * {
+    flex: 1 1 50%;
+    white-space: nowrap;
+
+    :last-child {
+      text-align: right;
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+  .get-started {
+    color: #ffa200;
+  }
+}
+
+.error {
+  color: maroon;
+}

@@ -1,0 +1,34 @@
+mat-card {
+  display: flex;
+  padding: 8px;
+  margin-top: 4px;
+
+  label {
+    flex: 0 0 32px;
+    cursor: pointer;
+
+    mat-icon {
+      text-align: center;
+      line-height: 42px;
+    }
+  }
+
+  input {
+    flex: 1 1 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0 8px;
+    font-size: 18px;
+    line-height: 42px;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: lightgray;
+    }
+
+    &:not(:focus) {
+      background: transparent;
+      border-color: transparent;
+    }
+  }
+}

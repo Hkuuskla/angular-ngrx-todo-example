@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "angular-ngrx-todo-example"
+  "defaultProject": "angular-ngrx-todo-example",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
